@@ -13,7 +13,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @Data
 public class UserPersonaResponseDTO {
-    private int c_ID;
+    private Long c_ID;
     private String zip;
     private String uID; //university ID
     private String state;
@@ -31,9 +31,9 @@ public class UserPersonaResponseDTO {
     private Instant lastLoginDate;
 
     public UserPersonaResponseDTO(UserPersona userPersona) {
-        this.c_ID = userPersona.getC_ID();
+        this.c_ID = userPersona.getCid();
         this.zip = userPersona.getZip();
-        this.uID = userPersona.getUID();
+        this.uID = userPersona.getUid();
         this.state = userPersona.getState();
         this.role = userPersona.getRole();
         this.phone = userPersona.getPhone();

@@ -28,8 +28,8 @@ public class UserPersonaController {
     */
 
     @GetMapping("/uid")
-    public ResponseEntity<UserPersona> personaOfUID(@RequestParam String uid) {
-        return ResponseEntity.ok(userPersonaService.findByUID(uid));
+    public ResponseEntity<UserPersona> personaOfUID(@RequestParam String uID) {
+        return ResponseEntity.ok(userPersonaService.findByUID(uID));
     }
 
     @GetMapping("/email")

@@ -20,10 +20,10 @@ public class UserPersona {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int c_ID;
+    private Long cid;
 
     @Column(name = "c_uid",unique = true, nullable = false)
-    private String uID; //university ID
+    private String uid; //university ID
 
     @Column(name = "role", nullable = false)
     private String role;

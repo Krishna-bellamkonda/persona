@@ -22,9 +22,9 @@ public class UserPersonaService {
                 .orElseThrow(() -> new RuntimeException("User persona not found with email: " + email));
     }
 
-    public UserPersona findByUID(String UID) {
-        return userPersonaRepository.findByUID(UID)
-                .orElseThrow(() -> new RuntimeException("User persona not found with UID: " + UID));
+    public UserPersona findByUID(String uID) {
+        return userPersonaRepository.findByUid(uID)
+                .orElseThrow(() -> new RuntimeException("User persona not found with UID: " + uID));
     }
 
     /*
