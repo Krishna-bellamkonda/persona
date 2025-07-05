@@ -28,7 +28,7 @@ public class UserPersonaService {
     }
 
     /*
-    public UserPersona findByC_ID(String C_ID) {
+    public UserPersona findByC_ID(Integer C_ID) {
         return userPersonaRepository.findByC_ID(C_ID)
                 .orElseThrow(() -> new RuntimeException("User persona not found with C_ID: " + C_ID));
     }
