@@ -25,7 +25,7 @@ public class UserPersona {
     @Column(name = "c_uid",unique = true, nullable = false)
     private String uid; //university ID
 
-    @Column(name = "role", nullable = false)
+    @Column(name = "c_role", nullable = false)
     private String role;
 
     @Column(name = "c_name", nullable = false)
