@@ -31,3 +31,10 @@ Retrieve a user persona by email:
 ```bash
 curl "http://localhost:8084/api/persona/email?email=user@example.com"
 ```
+
+Create a new user persona:
+```bash
+curl -X POST "http://localhost:8084/api/persona/create" \
+     -H 'Content-Type: application/json' \
+     -d '{"uid":"12345","email":"user@example.com"}'
+```
