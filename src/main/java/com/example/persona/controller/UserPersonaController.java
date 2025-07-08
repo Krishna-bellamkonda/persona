@@ -1,6 +1,7 @@
 package com.example.persona.controller;
 
 import com.example.persona.model.UserPersona;
+import com.example.persona.dto.UserPersonaRequestDTO;
 import com.example.persona.service.UserPersonaService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -36,8 +37,8 @@ public class UserPersonaController {
     }
 
     @PostMapping("/create")
-    public ResponseEntity<UserPersona> createPersona(@RequestBody UserPersona userPersona) {
-          userPersonaService.createPersona(userPersona);
-          return ResponseEntity.ok(userPersona); //dummy
+    public ResponseEntity<UserPersona> createPersona(@RequestBody UserPersonaRequestDTO request) {
+          UserPersona saved = userPersonaService.createPersona(request);
+          return ResponseEntity.ok(saved);
     }
 }

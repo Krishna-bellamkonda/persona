@@ -4,12 +4,10 @@ import com.example.persona.dto.UserPersonaRequestDTO;
 import com.example.persona.model.UserPersona;
 import com.example.persona.repository.UserPersonaRepository;
 import org.springframework.stereotype.Service;
-
 import java.time.ZoneOffset;
 
 @Service
 public class UserPersonaService {
-
     private final UserPersonaRepository userPersonaRepository;
 
     // Constructor injection for UserPersonaRepository
@@ -47,7 +45,6 @@ public class UserPersonaService {
                 .zip(dto.getZip())
                 .build());
     }
-
 
     /*
     public UserPersona findByC_ID(Integer C_ID) {
