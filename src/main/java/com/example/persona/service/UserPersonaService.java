@@ -5,6 +5,8 @@ import com.example.persona.model.UserPersona;
 import com.example.persona.repository.UserPersonaRepository;
 import org.springframework.stereotype.Service;
 
+import java.time.ZoneOffset;
+
 @Service
 public class UserPersonaService {
 
@@ -32,10 +34,10 @@ public class UserPersonaService {
                 .email(dto.getEmail())
                 .name(dto.getName())
                 .role(dto.getRole())
-                .dob(dto.getDob())
+                .dateOfBirth(dto.getDateOfBirth())
                 .gender(dto.getGender())
-                .signupDate(dto.getSignupDate())
-                .lastLoginDate(dto.getLastLoginDate())
+                .signUpDate(dto.getSignUpDate().toInstant(ZoneOffset.UTC))
+                .lastLoginDate(dto.getLastLoginDate() == null ? null : dto.getLastLoginDate().toInstant(ZoneOffset.UTC))
                 .phone(dto.getPhone())
                 .address1(dto.getAddress1())
                 .address2(dto.getAddress2())
