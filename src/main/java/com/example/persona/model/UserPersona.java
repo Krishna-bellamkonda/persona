@@ -1,20 +1,16 @@
 package com.example.persona.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.Instant;
 import java.time.LocalDate;
 
-
-@NoArgsConstructor
-@AllArgsConstructor
+@Builder
 @Getter
-@Setter
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "tbl_persona")
 public class UserPersona {
 
