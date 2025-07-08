@@ -4,10 +4,10 @@ import com.example.persona.dto.UserPersonaRequestDTO;
 import com.example.persona.model.UserPersona;
 import com.example.persona.repository.UserPersonaRepository;
 import org.springframework.stereotype.Service;
+import java.time.ZoneOffset;
 
 @Service
 public class UserPersonaService {
-
     private final UserPersonaRepository userPersonaRepository;
 
     // Constructor injection for UserPersonaRepository
@@ -32,10 +32,10 @@ public class UserPersonaService {
                 .email(dto.getEmail())
                 .name(dto.getName())
                 .role(dto.getRole())
-                .dateOfBirth(dto.getDob())
+                .dateOfBirth(dto.getDateOfBirth())
                 .gender(dto.getGender())
-                .signUpDate(dto.getSignupDate())
-                .lastLoginDate(dto.getLastLoginDate())
+                .signUpDate(dto.getSignUpDate().toInstant(ZoneOffset.UTC))
+                .lastLoginDate(dto.getLastLoginDate() == null ? null : dto.getLastLoginDate().toInstant(ZoneOffset.UTC))
                 .phone(dto.getPhone())
                 .address1(dto.getAddress1())
                 .address2(dto.getAddress2())
@@ -45,7 +45,6 @@ public class UserPersonaService {
                 .zip(dto.getZip())
                 .build());
     }
-
 
     /*
     public UserPersona findByC_ID(Integer C_ID) {
