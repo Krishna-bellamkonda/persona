@@ -1,17 +1,14 @@
 package com.example.persona.dto;
 
 import com.example.persona.model.UserPersona;
-import lombok.*;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.Instant;
 import java.time.LocalDate;
 
-@Getter
-@Setter
-@ToString
-@NoArgsConstructor
-@AllArgsConstructor
 @Data
+@NoArgsConstructor
 public class UserPersonaResponseDTO {
     private Long c_ID;
     private String zip;
